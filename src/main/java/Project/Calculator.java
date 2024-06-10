@@ -4,6 +4,9 @@
  */
 package Project;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author HP
@@ -14,6 +17,8 @@ public class Calculator extends javax.swing.JFrame {
      */
     public Calculator() {
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**
@@ -88,7 +93,7 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("<-");
+        jButton6.setText("<--");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
